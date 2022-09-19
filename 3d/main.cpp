@@ -1,10 +1,6 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-#define PI
-#define DEG2RAD
-#define RAD2DEG
-
 #pragma comment(lib, "OpenGL32")
 
 static void error_callback(int error, const char* description)
@@ -16,7 +12,6 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
 }
-
 
 int main(void)
 {
@@ -30,7 +25,6 @@ int main(void)
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
-
     glfwMakeContextCurrent(window);
     glfwSetKeyCallback(window, key_callback);
 
@@ -47,7 +41,8 @@ int main(void)
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         glColor3f(0.0f, 0.0f, 1.0f);
-        double rad = 0.5;
+
+        double rad = 1;
         double x[360], y[360];
         glBegin(GL_LINE_STRIP);
         for (int i = 0; i < 360; i++)
@@ -64,7 +59,6 @@ int main(void)
         }
         glEnd();
         glFinish();
-
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
