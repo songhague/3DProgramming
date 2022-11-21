@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 //vec3¿¡ ÁÂÇ¥ x,y,z
 struct vec3
 {

@@ -153,7 +153,7 @@ void Update()
             {
                 rrotation = false;
             }
-                
+
         }
         else  //크기를 +0.01일씩 +함
         {
@@ -163,9 +163,9 @@ void Update()
             {
                 rrotation = true;
             }
-                
+
         }
-       
+
 
         for (int i = 0; i < 360; i++)
         {
@@ -209,7 +209,7 @@ void Update()
         glBegin(GL_LINE_STRIP);
         for (int theta = 0; theta < 360; theta++)
         {
-            glColor4f(transformedCircleColor[theta].x[0][0], transformedCircleColor[theta].x[1][0], 
+            glColor4f(transformedCircleColor[theta].x[0][0], transformedCircleColor[theta].x[1][0],
                 transformedCircleColor[theta].x[2][0], transformedCircleColor[theta].x[3][0]);
             glVertex3f(transformedCircle[theta].x[0][0], transformedCircle[theta].x[1][0], 0.0f);
         }
